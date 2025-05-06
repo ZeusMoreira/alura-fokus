@@ -17,7 +17,7 @@ const titulos = {
     'descanso-longo': `Hora de voltar à superfície.<br><strong class="app__title-strong">Faça uma pausa longa.</strong>`
 }
 const timers = {
-    'foco': 10,
+    'foco': 1500,
     'descanso-curto': 300,
     'descanso-longo': 900,
 }
@@ -47,7 +47,7 @@ alterarTimerContexto(contexto)
 function alterarContexto(botaoContexto) {
     contexto = botaoContexto.getAttribute('data-contexto')
     html.setAttribute('data-contexto', contexto)
-    banner.setAttribute('src', `alura-fokus/imagens/${contexto}.png`)
+    banner.setAttribute('src', `/imagens/${contexto}.png`)
     alterarFundoBotaoContexto(botaoContexto)
     alterarTituloContexto(contexto)
     alterarTimerContexto(contexto)
@@ -98,14 +98,14 @@ function isPlaying(audio) {
 }
 
 function iniciarContagem() {
-    iconeBotaoComecarPause.setAttribute('src', 'alura-fokus/imagens/pause.png')
+    iconeBotaoComecarPause.setAttribute('src', '/imagens/pause.png')
     textoBotaoComecarPause.innerHTML = 'Parar'
     intervalo = setInterval(contar, 1000)
     playSom.play()
 }
 
 function pararContagem(som) {
-    iconeBotaoComecarPause.setAttribute('src', 'alura-fokus/imagens/play_arrow.png')
+    iconeBotaoComecarPause.setAttribute('src', '/imagens/play_arrow.png')
     textoBotaoComecarPause.innerHTML = 'Começar'
     clearInterval(intervalo)
     intervalo = null
