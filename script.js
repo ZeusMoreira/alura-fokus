@@ -21,10 +21,10 @@ const timers = {
     'descanso-curto': 300,
     'descanso-longo': 900,
 }
-const musica = new Audio('/sons/luna-rise-part-one.mp3')
-const playSom = new Audio('/sons/play.wav')
-const pauseSom = new Audio('/sons/pause.mp3')
-const tempoEsgotadoSom = new Audio('/sons/beep.mp3')
+const musica = new Audio('/alura-fokus/sons/luna-rise-part-one.mp3')
+const playSom = new Audio('/alura-fokus/sons/play.wav')
+const pauseSom = new Audio('/alura-fokus/sons/pause.mp3')
+const tempoEsgotadoSom = new Audio('/alura-fokus/sons/beep.mp3')
 
 let contexto = focoBtn.getAttribute('data-contexto')
 let tempoDecorridoEmSegundos = timers[contexto]
@@ -98,14 +98,14 @@ function isPlaying(audio) {
 }
 
 function iniciarContagem() {
-    iconeBotaoComecarPause.setAttribute('src', '/imagens/pause.png')
+    iconeBotaoComecarPause.setAttribute('src', '/alura-fokus/imagens/pause.png')
     textoBotaoComecarPause.innerHTML = 'Parar'
     intervalo = setInterval(contar, 1000)
     playSom.play()
 }
 
 function pararContagem(som) {
-    iconeBotaoComecarPause.setAttribute('src', '/imagens/play_arrow.png')
+    iconeBotaoComecarPause.setAttribute('src', '/alura-fokus/imagens/play_arrow.png')
     textoBotaoComecarPause.innerHTML = 'Começar'
     clearInterval(intervalo)
     intervalo = null

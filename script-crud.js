@@ -144,7 +144,7 @@ function configurarElementoTarefa(tarefa) {
     const botaoEditar = document.createElement('button')
     botaoEditar.className = 'app_button-edit'
     const imgEditar = document.createElement('img')
-    imgEditar.src = '/imagens/edit.png'
+    imgEditar.src = '/alura-fokus/imagens/edit.png'
     botaoEditar.appendChild(imgEditar)
 
     li.appendChild(iconeStatus)
