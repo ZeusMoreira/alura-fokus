@@ -47,7 +47,7 @@ alterarTimerContexto(contexto)
 function alterarContexto(botaoContexto) {
     contexto = botaoContexto.getAttribute('data-contexto')
     html.setAttribute('data-contexto', contexto)
-    banner.setAttribute('src', `/imagens/${contexto}.png`)
+    banner.setAttribute('src', `/alura-fokus/imagens/${contexto}.png`)
     alterarFundoBotaoContexto(botaoContexto)
     alterarTituloContexto(contexto)
     alterarTimerContexto(contexto)
