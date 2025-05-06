@@ -47,7 +47,7 @@ alterarTimerContexto(contexto)
 function alterarContexto(botaoContexto) {
     contexto = botaoContexto.getAttribute('data-contexto')
     html.setAttribute('data-contexto', contexto)
-    banner.setAttribute('src', `/alura-fokus/imagens/${contexto}.png`)
+    banner.setAttribute('src', `./imagens/${contexto}.png`)
     alterarFundoBotaoContexto(botaoContexto)
     alterarTituloContexto(contexto)
     alterarTimerContexto(contexto)
@@ -98,14 +98,14 @@ function isPlaying(audio) {
 }
 
 function iniciarContagem() {
-    iconeBotaoComecarPause.setAttribute('src', '/alura-fokus/imagens/pause.png')
+    iconeBotaoComecarPause.setAttribute('src', './imagens/pause.png')
     textoBotaoComecarPause.innerHTML = 'Parar'
     intervalo = setInterval(contar, 1000)
     playSom.play()
 }
 
 function pararContagem(som) {
-    iconeBotaoComecarPause.setAttribute('src', '/alura-fokus/imagens/play_arrow.png')
+    iconeBotaoComecarPause.setAttribute('src', './imagens/play_arrow.png')
     textoBotaoComecarPause.innerHTML = 'Começar'
     clearInterval(intervalo)
     intervalo = null
